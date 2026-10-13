@@ -1,0 +1,2 @@
+const WHATSAPP_NUMBERS=['3507748968','3008806606'];
+document.querySelectorAll('.whatsapp').forEach(button=>button.addEventListener('click',event=>{event.preventDefault();const number=WHATSAPP_NUMBERS[Math.floor(Math.random()*WHATSAPP_NUMBERS.length)];const url=`https://wa.me/57${number}?text=${encodeURIComponent(button.dataset.message||'¡Hola! Quiero conocer más sobre ONA.')}`;window.location.assign(url)}));
